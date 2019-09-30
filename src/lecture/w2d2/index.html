@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS and Specificity</title>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<body>
+		<p>
+		  Order of Style Importance:
+		</p>
+		<p>1. Browser's default styles</p>
+		<p>2. Any imported styles and style sheets</p>
+		<p>
+		  Styles that are important late take preference
+		</p>
+		<p>3. Specificity score </p>
+
+		<p>
+		  (A, B, C)
+		  A => Count of ID selectors <br>
+		  B => Count of class, psuedoclass and attribute selectors <br>
+		  C => Count of type selectors
+		</p>
+
+		<p>
+		  * => (0,0,0) => 0 <br>
+		  li => (0,0,1) => 1 <br>
+		  ul li => (0,0,2) => 2 <br>
+		  li.red => (0,1,1) => 11 <br>
+		  #content => (1,0,0) => 100
+		</p>
+
+		<ul>
+			<li><a href="http://www.ksl.com">Text</a></li>	
+			<li><a href="">Text</a></li>
+			<li><a href="">Text</a></li>
+			<li><a href="">Text</a></li>
+			<li><a href="">Text</a></li>
+			
+	</body>
+</html>

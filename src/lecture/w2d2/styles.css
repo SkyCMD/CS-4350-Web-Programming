@@ -1,0 +1,57 @@
+* {
+/*
+	padding: 0px;
+	margin: 0px;
+*/
+}
+
+.cool-beans > h1 {
+	display: flex;
+}
+
+body {
+
+	background-color: #CCCCCC;
+}
+
+[id] {
+	display: block;
+}
+
+div:first-child {
+	color: antiquewhite;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	background-color: #6D7E8F;
+	padding: 10px 0px 10px 25px;
+	margin: 25px;
+	border: 2px solid black;
+}
+
+p {
+	display: flex;
+/*	visibility: hidden; */
+}
+
+a{
+	color purple;
+	text-decoration: none;
+}
+
+a:visited {
+	color: red;
+}
+
+/*
+* means all elements - everything
+. means class selector
+nothing means tag selector
+[] means attribute selector
+# means ID selector
+:pseudo class selector
+*/
