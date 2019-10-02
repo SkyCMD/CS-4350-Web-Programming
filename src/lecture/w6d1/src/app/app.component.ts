@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'w6d1';
+  private username: string;
+  private io: {emit: (key: string, value: string) => void, on: (event: string, callback: (data) => void) => void};
 }
