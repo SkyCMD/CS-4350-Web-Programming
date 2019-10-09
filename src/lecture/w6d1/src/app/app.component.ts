@@ -23,6 +23,10 @@ export class AppComponent {
   constructor() {
     this.io = socket('https://cs4350sockets.herokuapp.com');
 
+    while(!this.username){
+      this.username = prompt('Enter a username: ')
+    }
+
     this.setUpListeners();
     this.io.emit(SocketEvent.AddUser, this.username)
 
@@ -106,6 +110,31 @@ export class AppComponent {
       this.log(SocketMessage.Welcome, true);
       this.addParticipantsMessage(data);
     });
-  }
+    this.io.on(SocketEvent.NewMessage, (data) =>{
+      this.addChatMessage(data);
+    });
 
+    this.io.on(SocketEvent.UserJoined, (data)=>{
+      this.log(data.username + ' joined.');
+    });
+
+   this.io.on(SocketEvent.UserLeft, (data)=>{
+     this.log(data.username + ' left.');
+   });
+
+   this.io.on(SocketEvent.Disconnect, ()=>{
+     this.log(SocketMessage.Disconnected);
+   });
+
+    this.io.on(SocketEvent.Reconnect, () =>{
+      this.log(SocketMessage.Reconnected);
+      if(this.username){
+        this.io.emit(SocketEvent.AddUser, this.username);
+  }
+    });
+
+    this.io.on(SocketEvent.ReconnectError, () =>{
+      this.log(SocketEvent.ReconnectError);
+    });
+  }
 }

@@ -25,7 +25,7 @@ export class MessageComponent implements OnInit {
 
   public ngOnInit() { //should have 'everything' good to go by ngOnInIt
     this.isLog = this.appMessage.isLog;
-    this.isMessage = this.appMessage.isLog;
+    this.isMessage = !this.appMessage.isLog;
     this.color = this.appMessage.color;
     this.message = this.appMessage.message;
     this.username = this.appMessage.username;
