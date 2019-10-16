@@ -1,0 +1,59 @@
+Midterm Study Guide
+35 Questions, 3 are essay (1 to 3 sentences), there are some fill in the blank, multiple choice, multiple answers, true/false, and matching
+Friday, Oct 18th. Open web, notes, open code, 
+	1. HTML	
+		a. HTML entities (Hex Codes HTML codes)
+		b. Tags (know how to make them and which attributes they have)
+			1.  Script
+			2.  Styles
+			3.  Image
+			4.  Video
+			5.  Audio
+			6.  Iframe
+			7.  Object
+			8.  A
+			9.  Link
+			10. Headers
+			11. Head
+			12. Title (inside head tag)
+		c. What does HTML stand for?
+		d. What is the organization responsible for web standards?
+		e. Color hex codes (no specific colors, will ask us if something is or is not a color hex code)(#FFF or #000000)
+
+	2. JavaScript
+		a. Variable declarations (var, let, const)
+		b. Choosing truthy/falsy values
+		c. Restricted names
+		d. Array creation
+		e. Function declaration
+		f. Grab elements from the DOM (HTML and javascript) (document.getElement(...))
+		g. Basic types
+		h. Equality operators (good twins and evil twins)(how do the good ones work??)
+
+	3. TypeScript
+		a. Who owns it
+		b. Open or closed source
+		c. What different OSs can run it
+		d. TypeScript interfaces - do they compile to code?
+		e. Files required for compilation
+		f. Client or server side
+		g. What does it compile to?
+		h. Compilation command
+		i. What is a linter, what does it do?
+		j. Decorators (   component or module, ex// @Module(object)   )
+
+	4. Angular
+		a. Angluar-CLI (what does it run on) uses webpack in the background (only cli uses it)
+
+	5. npm
+		a. General commands we use in class and what they do (npm init, npm install, etc.)
+
+	6. Webpack
+		a. What is webpack, what does it do?
+
+	7. CSS
+		a. Animation transitions (properties)
+		b. Specificity
+		c. "Box" properties
+		d. Measurement units (we should have this from an assignment) (%, pt, pc, px, etc.)
+		e. Differences between flexbox and css grid
