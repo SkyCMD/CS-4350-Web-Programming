@@ -54,6 +54,6 @@ Friday, Oct 18th. Open web, notes, open code,
 	7. CSS
 		a. Animation transitions (properties)
 		b. Specificity
-		c. "Box" properties
+		c. "Box" properties (border, padding, margin)(box is a representation of those three things)
 		d. Measurement units (we should have this from an assignment) (%, pt, pc, px, etc.)
 		e. Differences between flexbox and css grid
