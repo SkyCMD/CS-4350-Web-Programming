@@ -2,54 +2,60 @@ Midterm Study Guide
 35 Questions, 3 are essay (1 to 3 sentences), there are some fill in the blank, multiple choice, multiple answers, true/false, and matching
 Friday, Oct 18th. Open web, notes, open code, 
 	1. HTML	
-		a. HTML entities (Hex Codes HTML codes)
+		a. HTML entities (Hex Codes HTML codes) ex// left arrow symbol is entity: &larr; html code: &#8592; HEX code is &#x2190
 		b. Tags (know how to make them and which attributes they have)
-			1.  Script
-			2.  Styles
-			3.  Image
-			4.  Video
-			5.  Audio
-			6.  Iframe
-			7.  Object
-			8.  A
-			9.  Link
-			10. Headers
-			11. Head
+			1.  Script 	<script></script> att: async, charset, defer, src, type
+			2.  Styles	<head><style></style></head> attr: media, type
+			3.  Image  	<img src="" alt="" heigh="" width=""> attr: align, alt, border, crossorigin, height, hspace, ismap, longdesc, src, srcset, usemap, vspace, width
+			4.  Video	<video src="./" controls></video> attr: autoplay, controls, height, loop, muted, poster, preload, src, width
+			5.  Audio	<audio controls> <source src="./"></audio> attr: autoplay, controls, loop, muted, preload, src
+			6.  Iframe	<ifream src=""></iframe> attr: align, frameborder, height, longdesc, marginheight, marginwidth, name, sandbox, scrolling, src, srcdoc, width
+			7.  Object	<object width="" height="" data=""</object> attr: align, archive, border, classid, codebase, codetype, data, declare, form, height, hspace, name, standby, type, usemap, vspace
+			8.  A		<a href="">Link text</a> attr: charset, coords, download, href, hreflang, media, name, ping, referrerpolicy, rel, rev, shape, target, type
+			9.  Link	<head><link rel="stylesheet" type="" href=""></head> USED TO LINK EXTERNAL STYLE SHEETS attr: charset, href, hreflang, media, rel, raev, sizes, target, type
+			10. Headers	<header><h1></h1></header> <h1> through <h6>
+			11. Head	<head></head> contains metadata such as <title>, <style>, <meta>, <link>, <script>, <base>
 			12. Title (inside head tag)
-		c. What does HTML stand for?
-		d. What is the organization responsible for web standards?
-		e. Color hex codes (no specific colors, will ask us if something is or is not a color hex code)(#FFF or #000000)
+		c. What does HTML stand for? hypertext markup language. HTML 5 is the latest. 
+		d. What is the organization responsible for web standards? world wide web consortium (w3c)
+		e. Color hex codes (no specific colors, will ask us if something is or is not a color hex code)(#FFF or #000000) THE LAST ONE, #000000
 
 	2. JavaScript
-		a. Variable declarations (var, let, const)
-		b. Choosing truthy/falsy values
-		c. Restricted names
-		d. Array creation
-		e. Function declaration
+		a. Variable declarations (var, let, const)  var variableName(declares variable, can be undefined); let variableName(declares a block scope local variable, can be undefined); const variableName (read only);
+		b. Choosing truthy/falsy values falsey values: false, null, undefined, '', "", 0, Nan 		truthy: everything else
+		c. Restricted names (abstract boolean break byte case catch char class const continue debugger default delete do double else enum export extends false final finally float for function goto if implements import in instanceof int interface let long native new null package private protected public return short static super switch synchronized this throw throws transient true try typeof var volatile void while with)
+		d. Array creation   var array_name = [1,2,3...]; 
+		e. Function declaration  function() {}; function fooBar(){}; () => {}; const fooBar = () => {}
 		f. Grab elements from the DOM (HTML and javascript) (document.getElement(...))
-		g. Basic types
-		h. Equality operators (good twins and evil twins)(how do the good ones work??)
+		g. Basic types  number, string, boolean, null, undefined (unassigned values), object (complex data structures, passed by reference)
+		h. Equality operators (good twins and evil twins)(how do the good ones work??) == and != are evil. === and !== are good twins. 
+			false == undefined 	//false
+			false == null		//false
+			null == undefined 	//true
 
 	3. TypeScript
-		a. Who owns it
-		b. Open or closed source
-		c. What different OSs can run it
-		d. TypeScript interfaces - do they compile to code?
-		e. Files required for compilation
-		f. Client or server side
-		g. What does it compile to?
-		h. Compilation command
-		i. What is a linter, what does it do?
-		j. Decorators (   component or module, ex// @Module(object)   )
+		a. Who owns it  		Microsoft 
+		b. Open or closed source  	open-source
+		c. What different OSs can run it   works on any OS nowadays	
+		d. TypeScript interfaces - do they compile to code?   they do not, they are only used when typing the code, they aren't used by JavaScript at all
+		e. Files required for compilation  tsconfig.json, then any .ts file
+		f. Client or server side   either or works, server-side is Node.js
+		g. What does it compile to?	compiles to JavaScript
+		h. Compilation command  	npm start; tsc --watch
+		i. What is a linter, what does it do? 	outside tool that analyzes source code to flag errors, bugs, suspcicious stuff	
+		j. Decorators (   component or module, ex// @Module(object)   )		
 
 	4. Angular
 		a. Angluar-CLI (what does it run on) uses webpack in the background (only cli uses it)
 
 	5. npm
 		a. General commands we use in class and what they do (npm init, npm install, etc.)
+			npm init: set up a new or existing npm package
+			npm install: downloads a package and its dependencies, generates a node_modules folder with the installed modules
+			npm start: alias for npm run, 
 
 	6. Webpack
-		a. What is webpack, what does it do?
+		a. What is webpack, what does it do?   module bundler, takes all the code from the app and makes it usable in a web browser
 
 	7. CSS
 		a. Animation transitions (properties)
