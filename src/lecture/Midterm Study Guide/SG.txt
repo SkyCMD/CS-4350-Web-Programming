@@ -58,8 +58,25 @@ Friday, Oct 18th. Open web, notes, open code,
 		a. What is webpack, what does it do?   module bundler, takes all the code from the app and makes it usable in a web browser
 
 	7. CSS
-		a. Animation transitions (properties)
-		b. Specificity
+		a. Animation transitions (properties)   w3d3/animations.css
+		b. Specificity    if applying multiple CSS to the same element, it will be given points depending on the style sheet, and that which has the higher points will apply its effect on the element.
 		c. "Box" properties (border, padding, margin)(box is a representation of those three things)
+			border: 	goes around the padding and content
+			content: 	content of the box where text and images appear
+			padding: 	clears an area around the content, transparent
+			margin: 	clears an area outside the border, transparent
 		d. Measurement units (we should have this from an assignment) (%, pt, pc, px, etc.)
+			%: defines measurement as percentage
+			cm: centimeters
+			in: inches
+			mm: millimeters
+			px: pixels
+			pt: in points. 1 point is 1/72nd of an inch
+			em: relative measurement for font height. Each em unit is 12 pt.
+			ex: relative to a font's 'x' height
+			pc: picas. 1 pica = 12 pts
+			vw: viewport width, stands for a percentage of the browser's width
+			vh: viewport height, percentage of the browser's height
 		e. Differences between flexbox and css grid
+			flexbox: 1 dimension, content first approach
+			css grid: 2 dimensions, layout first approach
