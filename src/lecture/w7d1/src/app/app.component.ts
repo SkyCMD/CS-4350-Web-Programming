@@ -21,8 +21,8 @@ export class AppComponent {
   private isConnected = false; //knows it is implicity a boolean by value of false
 
   constructor() {
-    this.io = socket('https://cs4350sockets.herokuapp.com');
-    this.username = 'SkyCMD';
+    this.io = socket('http://localhost:3000');
+    this.username = 'CMD';
 
     this.setUpListeners();
     this.io.emit(SocketEvent.AddUser, this.username)
