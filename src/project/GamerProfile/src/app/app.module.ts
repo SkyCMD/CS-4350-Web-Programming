@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatStepperModule } from '@angular/material/stepper';
+import { MatStepperModule } from '@angular/material';
+import { MatIconModule } from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { MatStepperModule } from '@angular/material/stepper';
   ],
   imports: [
     MatStepperModule,
+    MatIconModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
