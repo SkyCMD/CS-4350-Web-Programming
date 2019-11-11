@@ -4,20 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatStepperModule, MatButtonModule } from '@angular/material';
-import { MatIconModule } from '@angular/material'
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    MatStepperModule,
-    MatIconModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
