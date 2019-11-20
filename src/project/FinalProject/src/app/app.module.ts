@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule, MatButtonModule, MatFormFieldModule, MatRadioModule, MatSelectModule, MatListModule, MatMenuModule } from '@angular/material';
 import { MatIconModule } from '@angular/material'
 import { ChartsModule } from 'ng2-charts';
+import { MyRadarChartComponent } from './my-radar-chart/my-radar-chart.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyRadarChartComponent
   ],
   imports: [
     MatStepperModule,
