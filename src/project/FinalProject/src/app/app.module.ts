@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule, MatButtonModule, MatFormFieldModule, MatRadioModule, MatSelectModule, MatListModule, MatMenuModule } from '@angular/material';
 import { MatIconModule } from '@angular/material'
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatIconModule } from '@angular/material'
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

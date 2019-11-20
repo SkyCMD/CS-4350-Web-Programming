@@ -8,9 +8,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  ::ng-deep .mat-step-header .mat-step-icon-selected {
-    /* background-color: red;  */
-  }
+  /* ::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: red; 
+  } */
 
 
   h1,
@@ -320,13 +320,13 @@
 
 <div class="content" role="main">
   <mat-vertical-stepper linear>
-      <mat-step label="Intro" completed=false optional=true>
-          <ng-template matStepLabel>Gamer Profile</ng-template>
-          Answer the following questions to get an idea of what type of gamer you are!
-          <br>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </mat-step>
+    <mat-step label="Intro" completed=false optional=true>
+      <ng-template matStepLabel>Gamer Profile</ng-template>
+      Answer the following questions to get an idea of what type of gamer you are!
+      <br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
     <mat-step label="Step 1" completed=true>
       <ng-template matStepLabel>Question 1</ng-template>
       <h4>What's your preference: 1, 2, or more players?</h4>
@@ -342,16 +342,214 @@
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="2" completed=true>
-        <ng-template matStepLabel>2</ng-template>
+      <mat-radio-group aria-label="Select an option">
+        <h3>On a scale of 1 to 10, with 10 being the highest, how much do you enjoy:</h3>
+        <h4>RPGs (role playing games)</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="3" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Immersiveness</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="4" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Hack and Slash (real-time combat focus)</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="5" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Horror</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="6" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Survival</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="7" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Puzzle-solving (examples include Portal, Legend of Zelda, Candy Crush)</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="8" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Strategy (examples include Civilization, Starcraft, Hearthstone)</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="9" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Humor</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="10" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Sport Games (examples include FIFA, NBA, PGA)</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
+    <mat-step label="11" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h4>Gaming With Others</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="12" completed=true>
+      <mat-radio-group aria-label="Select an option">
+        <h3>How important are ratings to you, such as Metacritic?</h3>
+        <h4>With 1 being it isn't important, and 10 being it is your primary concern.</h4>
+        <mat-radio-button value="1">1</mat-radio-button>
+        <mat-radio-button value="2">2</mat-radio-button>
+        <mat-radio-button value="3">3</mat-radio-button>
+        <mat-radio-button value="4">4</mat-radio-button>
+        <mat-radio-button value="5">5</mat-radio-button>
+        <mat-radio-button value="6">6</mat-radio-button>
+        <mat-radio-button value="7">7</mat-radio-button>
+        <mat-radio-button value="8">8</mat-radio-button>
+        <mat-radio-button value="9">9</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button>
+      </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
   </mat-vertical-stepper>
 </div>
-<div style="text-align: center">
-  <footer>
-    Want to find some games?&nbsp;
-    <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
-    </a>
-  </footer>
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a href="" class="nav-link" routerLink="/radar-chart">Your Profile</a>
+    </li>
+  </ul>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
+
+<div style="text-align: center">
+    <footer>
+      Want to find some games?&nbsp;
+      <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
+      </a>
+    </footer>
+  </div>
