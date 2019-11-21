@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {  getAdventureScore, 
+          getGorehoundScore, 
+          getScientistScore, 
+          getTrendyScore, 
+          getSocialScore 
+        } from '../calculate-score';
 
 @Component({
   selector: 'app-my-radar-chart',
@@ -11,12 +17,16 @@ export class MyRadarChartComponent implements OnInit {
   public radarChartType = 'radar';
 
   public radarChartData = [
-    {data: [6,5,4,2.5,5], label: 'Label A'}
+    {data: [getAdventureScore(),
+            getGorehoundScore(),
+            getScientistScore(),
+            getTrendyScore(),
+            getSocialScore()], 
+            label: 'Your Gamer Profile'}
   ];
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

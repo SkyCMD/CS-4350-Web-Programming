@@ -332,7 +332,7 @@
       <h4>What's your preference: 1, 2, or more players?</h4>
       <mat-form-field>
         <mat-label># of players</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="social">
           <mat-option *ngFor="let player of players" [value]="player.value">
             {{player.viewValue}}
           </mat-option>
@@ -347,193 +347,141 @@
       <mat-radio-group 
         aria-label="Select an option"
         class="rpg-radio-group"
-        [(ngModel)]="selectedScale">
-        <mat-radio-button class="rpg-radio-button" *ngFor="let scale of scales" [value]="scale">
+        [(ngModel)]="rpg">
+        <mat-radio-button class="rpg-radio-button" *ngFor="let scale of scaleRPG" [value]="scale">
           {{scale}}
         </mat-radio-button>
-
-        <!-- <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button> -->
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="3" completed=true>
-      <mat-radio-group aria-label="Select an option">
         <h4>Immersiveness</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="immersive-radio-group"
+        [(ngModel)]="immersive">
+        <mat-radio-button class="immersive-radio-button" *ngFor="let scale of scaleImmersive" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="4" completed=true>
-      <mat-radio-group aria-label="Select an option">
         <h4>Hack and Slash (real-time combat focus)</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="hack-and-slash-radio-group"
+        [(ngModel)]="hack">
+        <mat-radio-button class="hack-and-slash-radio-button" *ngFor="let scale of scaleHack" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="5" completed=true>
-      <mat-radio-group aria-label="Select an option">
         <h4>Horror</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="horror-radio-group"
+        [(ngModel)]="horror">
+        <mat-radio-button class="horror-radio-button" *ngFor="let scale of scaleHorror" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="6" completed=true>
-      <mat-radio-group aria-label="Select an option">
         <h4>Survival</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="survival-radio-group"
+        [(ngModel)]="survival">
+        <mat-radio-button class="survival-radio-button" *ngFor="let scale of scaleSurvival" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="7" completed=true>
-      <mat-radio-group aria-label="Select an option">
-        <h4>Puzzle-solving (examples include Portal, Legend of Zelda, Candy Crush)</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <h4>Puzzle solving (examples include Portal, Legend of Zelda, Candy Crush)</h4>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="puzzle-radio-group"
+        [(ngModel)]="puzzle">
+        <mat-radio-button class="puzzle-radio-button" *ngFor="let scale of scalePuzzle" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="8" completed=true>
-      <mat-radio-group aria-label="Select an option">
         <h4>Strategy (examples include Civilization, Starcraft, Hearthstone)</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="strategy-radio-group"
+        [(ngModel)]="strategy">
+        <mat-radio-button class="strategy-radio-button" *ngFor="let scale of scaleStrategy" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="9" completed=true>
-      <mat-radio-group aria-label="Select an option">
         <h4>Humor</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="humor-radio-group"
+        [(ngModel)]="humor">
+        <mat-radio-button class="humor-radio-button" *ngFor="let scale of scaleHumor" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="10" completed=true>
-      <mat-radio-group aria-label="Select an option">
-        <h4>Sport Games (examples include FIFA, NBA, PGA)</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <h4>Sports Games (examples include FIFA, NBA, PGA)</h4>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="sports-radio-group"
+        [(ngModel)]="sports">
+        <mat-radio-button class="sports-radio-button" *ngFor="let scale of scaleSports" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-
     <mat-step label="11" completed=true>
-      <mat-radio-group aria-label="Select an option">
-        <h4>Gaming With Others</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
-      </mat-radio-group><br>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </mat-step>
+      <h3>How important to you is:</h3>
+      <h4>That the game have a high rating, such as on Metacritic?</h4>
+      <mat-radio-group 
+      aria-label="Select an option"
+      class="rating-radio-group"
+      [(ngModel)]="rating">
+      <mat-radio-button class="rating-radio-button" *ngFor="let scale of scaleRating" [value]="scale">
+        {{scale}}
+      </mat-radio-button>
+    </mat-radio-group><br>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
     <mat-step label="12" completed=true>
-      <mat-radio-group aria-label="Select an option">
-        <h3>How important are ratings to you, such as Metacritic?</h3>
-        <h4>With 1 being it isn't important, and 10 being it is your primary concern.</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
-        <mat-radio-button value="2">2</mat-radio-button>
-        <mat-radio-button value="3">3</mat-radio-button>
-        <mat-radio-button value="4">4</mat-radio-button>
-        <mat-radio-button value="5">5</mat-radio-button>
-        <mat-radio-button value="6">6</mat-radio-button>
-        <mat-radio-button value="7">7</mat-radio-button>
-        <mat-radio-button value="8">8</mat-radio-button>
-        <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <h4>That the game be a more recent, modern game?</h4>
+        <mat-radio-group 
+        aria-label="Select an option"
+        class="modern-radio-group"
+        [(ngModel)]="modern">
+        <mat-radio-button class="modern-radio-button" *ngFor="let scale of scaleModern" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
