@@ -318,8 +318,8 @@
   </a>
 </div>
 
-<div class="content" role="main">
-  <mat-vertical-stepper linear>
+<div class="content" role="main" style="text-align: center">
+  <mat-horizontal-stepper linear>
     <mat-step label="Intro" completed=false optional=true>
       <ng-template matStepLabel>Gamer Profile</ng-template>
       Answer the following questions to get an idea of what type of gamer you are!
@@ -342,10 +342,17 @@
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="2" completed=true>
-      <mat-radio-group aria-label="Select an option">
-        <h3>On a scale of 1 to 10, with 10 being the highest, how much do you enjoy:</h3>
-        <h4>RPGs (role playing games)</h4>
-        <mat-radio-button value="1">1</mat-radio-button>
+      <h3>On a scale of 1 to 10, with 10 being the highest, how much do you enjoy:</h3>
+      <h4>RPGs (role playing games)</h4>
+      <mat-radio-group 
+        aria-label="Select an option"
+        class="rpg-radio-group"
+        [(ngModel)]="selectedScale">
+        <mat-radio-button class="rpg-radio-button" *ngFor="let scale of scales" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
+
+        <!-- <mat-radio-button value="1">1</mat-radio-button>
         <mat-radio-button value="2">2</mat-radio-button>
         <mat-radio-button value="3">3</mat-radio-button>
         <mat-radio-button value="4">4</mat-radio-button>
@@ -354,7 +361,7 @@
         <mat-radio-button value="7">7</mat-radio-button>
         <mat-radio-button value="8">8</mat-radio-button>
         <mat-radio-button value="9">9</mat-radio-button>
-        <mat-radio-button value="10">10</mat-radio-button>
+        <mat-radio-button value="10">10</mat-radio-button> -->
       </mat-radio-group><br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
@@ -531,7 +538,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-  </mat-vertical-stepper>
+  </mat-horizontal-stepper>
 </div>
 
 <div class="container">
@@ -540,16 +547,15 @@
       <a href="" class="nav-link" routerLink="/radar-chart">Your Profile</a>
     </li>
   </ul>
-
   <div>
     <router-outlet></router-outlet>
   </div>
 </div>
 
 <div style="text-align: center">
-    <footer>
-      Want to find some games?&nbsp;
-      <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
-      </a>
-    </footer>
-  </div>
+  <footer>
+    Want to find some games?&nbsp;
+    <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
+    </a>
+  </footer>
+</div>
