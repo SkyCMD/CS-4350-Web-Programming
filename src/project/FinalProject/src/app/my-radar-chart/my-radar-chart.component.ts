@@ -9,28 +9,15 @@ import { AppComponent } from '../app.component';
 })
 export class MyRadarChartComponent implements OnInit {
 
-  @Input() answers;
+  @Input() adventureScore: number;
+  @Input() gorehoundScore: number;
+  @Input() scientistScore: number;
+  @Input() trendyScore: number;
+  @Input() socialScore: number;
 
   constructor(
     private appComponent: AppComponent,
   ) {}
-
-  getAdventureScore() {
-    console.log('get adventure score', this.appComponent.getAdventureScore());
-    return this.appComponent.getAdventureScore();
-  }
-  getGorehoundScore() {
-    return this.appComponent.getGorehoundScore();
-  }
-  getScientistScore() {
-    return this.appComponent.getScientistScore();
-  }
-  getTrendyScore() {
-    return this.appComponent.getTrendyScore();
-  }
-  getSocialScore() {
-    return this.appComponent.getSocialScore();
-  }
 
   public radarChartLabels = ['Adventurer','Gorehound','Scientist','Trendy','Social'];
   public radarChartType = 'radar';
@@ -38,17 +25,17 @@ export class MyRadarChartComponent implements OnInit {
   getRadarChartData() {
     return [{
       data: [
-        this.answers,
-        this.getGorehoundScore(),
-        this.getScientistScore(),
-        this.getTrendyScore(),
-        this.getSocialScore()
+        this.adventureScore,
+        this.gorehoundScore,
+        this.scientistScore,
+        this.trendyScore,
+        this.socialScore
       ], 
       label: 'Your Gamer Profile'
     }];
   }
 
   ngOnInit() {
-    console.log(this.answers)
+    
   }
 }

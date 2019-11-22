@@ -43,9 +43,10 @@ export class AppComponent {
   scaleRating: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   scaleModern: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  answers = Array(10);
+  answers = Array(12);
 
   setAnswer(index, answer) {
+    this.answers = [...this.answers];
     this.answers[index] = answer;
   }
 
@@ -64,17 +65,17 @@ export class AppComponent {
   }
 
   getScientistScore(): number {
-    let score = this.answers[1];
+    let score = this.answers[2];
     return score;
   }
 
   getTrendyScore(): number {
-    let score = this.answers[1];
+    let score = this.answers[3];
     return score;
   }
 
   getSocialScore(): number {
-    let score = this.answers[1];
+    let score = this.answers[4];
     return score;
   }
   
