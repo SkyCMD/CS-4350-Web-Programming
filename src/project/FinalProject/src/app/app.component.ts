@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { getAdventureScore, getSocialScore } from './calculate-score'
+import { ChangeDetectionStrategy } from '@angular/compiler/src/core';
 
 export interface Players {
   value: number;
@@ -9,7 +10,7 @@ export interface Players {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   social: number;
@@ -42,5 +43,39 @@ export class AppComponent {
   scaleRating: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   scaleModern: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+  answers = Array(10);
+
+  setAnswer(index, answer) {
+    this.answers[index] = answer;
+  }
+
+  getAnswers(): number[] {
+    return this.answers;
+  }
+
+  getAdventureScore(): number {
+    let score = this.answers[0];
+    return score;
+  }
+
+  getGorehoundScore(): number {
+    let score = this.answers[1];
+    return score;
+  }
+
+  getScientistScore(): number {
+    let score = this.answers[1];
+    return score;
+  }
+
+  getTrendyScore(): number {
+    let score = this.answers[1];
+    return score;
+  }
+
+  getSocialScore(): number {
+    let score = this.answers[1];
+    return score;
+  }
   
 }

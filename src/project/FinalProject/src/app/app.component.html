@@ -332,8 +332,8 @@
       <h4>What's your preference: 1, 2, or more players?</h4>
       <mat-form-field>
         <mat-label># of players</mat-label>
-        <mat-select [(ngModel)]="social">
-          <mat-option *ngFor="let player of players" [value]="player.value">
+    <mat-select [(ngModel)]="social" (selectionChange)="setAnswer(0, $event.value)">
+          <mat-option *ngFor="let player of players" [(value)]="player.value">
             {{player.viewValue}}
           </mat-option>
         </mat-select>
@@ -496,7 +496,10 @@
     </li>
   </ul>
   <div>
-    <router-outlet></router-outlet>
+    <app-my-radar-chart
+      [answers]="getAnswers()"
+    >
+    </app-my-radar-chart>
   </div>
 </div>
 

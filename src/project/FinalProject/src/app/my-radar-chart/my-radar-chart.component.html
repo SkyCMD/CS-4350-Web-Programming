@@ -1,6 +1,7 @@
 <div style="display: block">
     <canvas baseChart 
-            [datasets]="radarChartData" 
+            [datasets]="getRadarChartData()" 
             [labels]="radarChartLabels" 
             [chartType]="radarChartType"></canvas>
+            {{answers}}
 </div>
