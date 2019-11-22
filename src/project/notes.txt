@@ -1,16 +1,17 @@
+# people [0]
 how much you enjoy:
-rpg
-immersive
-hack and slash
-horror
-survival
-puzzle
-stategy
-rating
-modern/recent
-humor
-social
-sports
+rpg [1]
+immersive [2]
+hack and slash [3]
+horror [4]
+survival [5]
+puzzle [6]
+stategy [7]
+humor [8]
+sports [9]
+rating [10]
+modern/recent [11]
+
 
 MAIN CATEGORIES
 adventurer
