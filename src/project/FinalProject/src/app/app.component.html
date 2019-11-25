@@ -537,17 +537,15 @@
     <router-outlet></router-outlet>
   </div>
 </div> -->
-<div style="height: 100px">
-  <div>
-    <app-my-radar-chart
-      [adventureScore]="getAdventureScore()"
-      [gorehoundScore]="getGorehoundScore()"
-      [scientistScore]="getScientistScore()"
-      [trendyScore]="getTrendyScore()"
-      [socialScore]="getSocialScore()"
-    >
-    </app-my-radar-chart>
-  </div>
+<div height="100px">
+<app-my-radar-chart
+  [adventureScore]="getAdventureScore()"
+  [gorehoundScore]="getGorehoundScore()"
+  [scientistScore]="getScientistScore()"
+  [trendyScore]="getTrendyScore()"
+  [socialScore]="getSocialScore()"
+>
+</app-my-radar-chart>
 </div>
 
 <div style="text-align: center">
