@@ -5,6 +5,8 @@ import { MyRadarChartComponent } from './my-radar-chart/my-radar-chart.component
 
 const routes: Routes = [
   {path: 'radar-chart', component: MyRadarChartComponent},
+  {path: 'description', component: MyRadarChartComponent},
+  {path: 'games', component: MyRadarChartComponent},
   {path: '**', component: MyRadarChartComponent}
 ];
 

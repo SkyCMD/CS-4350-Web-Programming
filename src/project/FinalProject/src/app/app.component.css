@@ -3,3 +3,5 @@
     margin-left: 16px;
     margin-bottom: 10px;
   }
+
+  #parent {overflow: hidden}

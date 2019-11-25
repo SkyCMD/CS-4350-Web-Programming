@@ -511,12 +511,33 @@
   </mat-horizontal-stepper>
 </div>
 
-<div class="container">
+<!-- <div class="container">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a href="" class="nav-link" routerLink="/radar-chart">Your Profile</a>
     </li>
+    <li class="nav-item">
+      <a href="" class="nav-link" routerLink="/description">Descriptions</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link" routerLink="/games">Recommended Games</a>
+    </li>
   </ul>
+  <div>
+    <app-my-radar-chart
+      [adventureScore]="getAdventureScore()"
+      [gorehoundScore]="getGorehoundScore()"
+      [scientistScore]="getScientistScore()"
+      [trendyScore]="getTrendyScore()"
+      [socialScore]="getSocialScore()"
+    >
+    </app-my-radar-chart>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+<div style="height: 100px">
   <div>
     <app-my-radar-chart
       [adventureScore]="getAdventureScore()"
