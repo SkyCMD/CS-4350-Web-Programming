@@ -15,6 +15,9 @@ export class MyRadarChartComponent implements OnInit {
   @Input() trendyScore: number;
   @Input() socialScore: number;
 
+  responsive: true;
+  maintainAspectRatio: false;
+
   constructor(
     private appComponent: AppComponent,
   ) {}
