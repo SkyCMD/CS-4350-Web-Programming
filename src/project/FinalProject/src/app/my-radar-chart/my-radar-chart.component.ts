@@ -22,7 +22,7 @@ export class MyRadarChartComponent implements OnInit {
     private appComponent: AppComponent,
   ) {}
 
-  public radarChartLabels = ['Adventurer','Gorehound','Scientist','Trendy','Social'];
+  public radarChartLabels = ['Adventurer','Gorehound','Scientist','Trendy','Gregarious'];
   public radarChartType = 'radar';
 
   getRadarChartData() {
