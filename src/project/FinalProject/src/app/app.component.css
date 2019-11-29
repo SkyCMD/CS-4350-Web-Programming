@@ -11,5 +11,18 @@
    display: grid;
    grid-template-columns: 20% 20% 20% 20% 20%;
    justify-items: center;
-   padding: 10px;
+   /* grid-column-gap: 20 px; */
   }
+
+#text {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
