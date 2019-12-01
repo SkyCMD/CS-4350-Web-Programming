@@ -7,6 +7,15 @@ export interface Players {
   viewValue: string;
 }
 
+export interface Games {
+  adventure: string;
+  gorehound: string;
+  scientist: string;
+  trendy: string;
+  gregarious: string;
+
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -78,5 +87,12 @@ export class AppComponent {
     let score = this.answers[0]*1.2 + this.answers[9]*.5 + this.answers[11]*0.2 + this.answers[8]*.5;
     return score;
   }
+
+  public async loadAdventureData(url: string): Promise<Games[]> {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json as Games[];
+  }
   
 }
+
