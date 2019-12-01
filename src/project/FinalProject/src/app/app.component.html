@@ -8,11 +8,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* ::ng-deep .mat-step-header .mat-step-icon-selected {
-    background-color: red; 
-  } */
-
-
   h1,
   h2,
   h3,
@@ -322,13 +317,13 @@
   <mat-horizontal-stepper linear>
     <mat-step label="Intro" completed=false optional=true>
       <ng-template matStepLabel>Gamer Profile</ng-template>
-      Answer the following questions to get an idea of what type of gamer you are!
+      <h5>Answer the following questions to get an idea of what type of gamer you are!</h5>
       <br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
     <mat-step label="Step 1" completed=true>
-      <ng-template matStepLabel>Question 1</ng-template>
+      <ng-template matStepLabel>Players</ng-template>
       <h4>What's your preference: 1, 2, or more players?</h4>
       <mat-form-field>
         <mat-label># of players</mat-label>
@@ -341,7 +336,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="2" completed=true>
+    <mat-step label="RPG" completed=true>
       <h3>On a scale of 1 to 10, with 10 being the highest, how much do you enjoy:</h3>
       <h4>RPGs (role playing games)</h4>
       <mat-radio-group 
@@ -357,8 +352,8 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="3" completed=true>
-        <h4>Immersiveness</h4>
+    <mat-step label="Immersive" completed=true>
+        <h4>Immersiveness (quality story, characters, worldbuildling)</h4>
         <mat-radio-group 
           aria-label="Select an option"
           class="immersive-radio-group"
@@ -372,7 +367,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="4" completed=true>
+    <mat-step label="H&S" completed=true>
         <h4>Hack and Slash (real-time combat focus)</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -387,7 +382,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="5" completed=true>
+    <mat-step label="Horror" completed=true>
         <h4>Horror</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -402,7 +397,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="6" completed=true>
+    <mat-step label="Survival" completed=true>
         <h4>Survival</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -417,7 +412,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="7" completed=true>
+    <mat-step label="Puzzle" completed=true>
         <h4>Puzzle solving (examples include Portal, Legend of Zelda, Candy Crush)</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -432,7 +427,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="8" completed=true>
+    <mat-step label="Strategy" completed=true>
         <h4>Strategy (examples include Civilization, Starcraft, Hearthstone)</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -447,7 +442,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="9" completed=true>
+    <mat-step label="Humor" completed=true>
         <h4>Humor</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -462,7 +457,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="10" completed=true>
+    <mat-step label="Sports" completed=true>
         <h4>Sports Games (examples include FIFA, NBA, PGA)</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -477,7 +472,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
-    <mat-step label="11" completed=true>
+    <mat-step label="Rating" completed=true>
       <h3>How important to you is:</h3>
       <h4>That the game have a high rating, such as on Metacritic?</h4>
       <mat-radio-group 
@@ -493,7 +488,7 @@
     <button mat-button matStepperPrevious>Back</button>
     <button mat-button matStepperNext>Next</button>
   </mat-step>
-    <mat-step label="12" completed=true>
+    <mat-step label="Modern" completed=true>
         <h4>That the game be a more recent, modern game?</h4>
         <mat-radio-group 
           aria-label="Select an option"
@@ -548,11 +543,11 @@
   </app-my-radar-chart>
 </div>
 <div class="grid-container">
-  <div><img alt="Adventurer" src="../assets/images.jpg" /></div>
-  <div><img alt="Gorehound" src="../assets/images.jpg" /></div>
-  <div><img alt="Scientist" src="../assets/images.jpg" /></div>
-  <div><img alt="Trendy" src="../assets/images.jpg" /></div>
-  <div><img alt="Gregarious" src="../assets/images.jpg" /></div>
+  <div><img alt="Adventurer" src="../assets/adventurer.gif" /></div>
+  <div><img alt="Gorehound" src="../assets/gorehound.gif" /></div>
+  <div><img alt="Scientist" src="../assets/scientist.gif" /></div>
+  <div><img alt="Trendy" src="../assets/trendy.gif" /></div>
+  <div><img alt="Gregarious" src="../assets/gregarious.gif" /></div>
   
   <div><h5><p id="text" align="center">Exploration, journey, and purpose.</p></h5> 
     <h6><p id="text" align="center">Whether hero or villian, the adventurer enjoys interacting with different 
@@ -582,7 +577,7 @@
     <ul>
       <li>Dynamic puzzles</li>
       <li>A world with established rules</li>
-      <li>Requires multiples attempts</li>
+      <li>Requires multiple attempts</li>
       <li>Strategic</li>
     </ul>
     </h6>
@@ -612,8 +607,6 @@
     <p id='adventure-games'></p>
   </div>    
 </div>
-
-
 
 <footer>
     Want to find some games?&nbsp;
