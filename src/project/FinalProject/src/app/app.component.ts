@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { getAdventureScore, getSocialScore } from './calculate-score'
 import { ChangeDetectionStrategy } from '@angular/compiler/src/core';
 
 export interface Players {
