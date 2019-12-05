@@ -290,11 +290,8 @@
   <img width="40" alt="Gamer Profile" src="../assets/controller-clipart-svg-1.png" />
   <span>Gamer Profile</span>
   <div class="spacer"></div>
-  <a aria-label="Creator's Twitter" target="_blank" rel="noopener" href="https://twitter.com/SkyCMD"
-    title="Creator's Twitter">
-
-    <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 400 400">
+  <a aria-label="Creator's Twitter" target="_blank" rel="noopener" href="https://twitter.com/SkyCMD" title="Creator's Twitter">
+    <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
       <defs>
         <style>
           .cls-1 {
@@ -307,8 +304,8 @@
         </style>
       </defs>
       <rect class="cls-1" width="400" height="400" />
-      <path class="cls-2"
-        d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" />
+      <path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
+      />
     </svg>
   </a>
 </div>
@@ -317,17 +314,18 @@
   <mat-horizontal-stepper linear>
     <mat-step label="Intro" completed=false optional=true>
       <ng-template matStepLabel>Gamer Profile</ng-template>
-      <h5>Answer the following questions to get an idea of what type of gamer you are!</h5>
+      <h3>Answer the following questions to get an idea of what type of gamer you are!</h3>
       <br>
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Step 1" completed=true>
       <ng-template matStepLabel>Players</ng-template>
       <h4>What's your preference: 1, 2, or more players?</h4>
       <mat-form-field>
         <mat-label># of players</mat-label>
-    <mat-select [(ngModel)]="social" (selectionChange)="setAnswer(0, $event.value)">
+        <mat-select [(ngModel)]="social" (selectionChange)="setAnswer(0, $event.value)">
           <mat-option *ngFor="let player of players" [(value)]="player.value">
             {{player.viewValue}}
           </mat-option>
@@ -336,15 +334,11 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="RPG" completed=true>
       <h3>On a scale of 1 to 10, with 10 being the highest, how much do you enjoy:</h3>
       <h4>RPGs (role playing games)</h4>
-      <mat-radio-group 
-        aria-label="Select an option"
-        class="rpg-radio-group"
-        [(ngModel)]="rpg"
-        (change)="setAnswer(1, $event.value)"
-      >
+      <mat-radio-group aria-label="Select an option" class="rpg-radio-group" [(ngModel)]="rpg" (change)="setAnswer(1, $event.value)">
         <mat-radio-button class="rpg-radio-button" *ngFor="let scale of scaleRPG" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -352,14 +346,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Immersive" completed=true>
-        <h4>Immersiveness (quality story, characters, worldbuildling)</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="immersive-radio-group"
-          [(ngModel)]="immersive"
-          (change)="setAnswer(2, $event.value)"
-        >
+      <h4>Immersiveness (quality story, characters, worldbuildling)</h4>
+      <mat-radio-group aria-label="Select an option" class="immersive-radio-group" [(ngModel)]="immersive" (change)="setAnswer(2, $event.value)">
         <mat-radio-button class="immersive-radio-button" *ngFor="let scale of scaleImmersive" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -367,14 +357,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="H&S" completed=true>
-        <h4>Hack and Slash (real-time combat focus)</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="hack-and-slash-radio-group"
-          [(ngModel)]="hack"
-          (change)="setAnswer(3, $event.value)"
-        >
+      <h4>Hack and Slash (real-time combat focus)</h4>
+      <mat-radio-group aria-label="Select an option" class="hack-and-slash-radio-group" [(ngModel)]="hack" (change)="setAnswer(3, $event.value)">
         <mat-radio-button class="hack-and-slash-radio-button" *ngFor="let scale of scaleHack" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -382,14 +368,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Horror" completed=true>
-        <h4>Horror</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="horror-radio-group"
-          [(ngModel)]="horror"
-          (change)="setAnswer(4, $event.value)"
-        >
+      <h4>Horror</h4>
+      <mat-radio-group aria-label="Select an option" class="horror-radio-group" [(ngModel)]="horror" (change)="setAnswer(4, $event.value)">
         <mat-radio-button class="horror-radio-button" *ngFor="let scale of scaleHorror" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -397,14 +379,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Survival" completed=true>
-        <h4>Survival</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="survival-radio-group"
-          [(ngModel)]="survival"
-          (change)="setAnswer(5, $event.value)"
-        >
+      <h4>Survival</h4>
+      <mat-radio-group aria-label="Select an option" class="survival-radio-group" [(ngModel)]="survival" (change)="setAnswer(5, $event.value)">
         <mat-radio-button class="survival-radio-button" *ngFor="let scale of scaleSurvival" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -412,14 +390,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Puzzle" completed=true>
-        <h4>Puzzle solving (examples include Portal, Legend of Zelda, Candy Crush)</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="puzzle-radio-group"
-          [(ngModel)]="puzzle"
-          (change)="setAnswer(6, $event.value)"
-        >
+      <h4>Puzzle solving (examples include Portal, Legend of Zelda, Candy Crush)</h4>
+      <mat-radio-group aria-label="Select an option" class="puzzle-radio-group" [(ngModel)]="puzzle" (change)="setAnswer(6, $event.value)">
         <mat-radio-button class="puzzle-radio-button" *ngFor="let scale of scalePuzzle" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -427,14 +401,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Strategy" completed=true>
-        <h4>Strategy (examples include Civilization, Starcraft, Hearthstone)</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="strategy-radio-group"
-          [(ngModel)]="strategy"
-          (change)="setAnswer(7, $event.value)"
-        >
+      <h4>Strategy (examples include Civilization, Starcraft, Hearthstone)</h4>
+      <mat-radio-group aria-label="Select an option" class="strategy-radio-group" [(ngModel)]="strategy" (change)="setAnswer(7, $event.value)">
         <mat-radio-button class="strategy-radio-button" *ngFor="let scale of scaleStrategy" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -442,14 +412,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Humor" completed=true>
-        <h4>Humor</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="humor-radio-group"
-          [(ngModel)]="humor"
-          (change)="setAnswer(8, $event.value)"
-        >
+      <h4>Humor</h4>
+      <mat-radio-group aria-label="Select an option" class="humor-radio-group" [(ngModel)]="humor" (change)="setAnswer(8, $event.value)">
         <mat-radio-button class="humor-radio-button" *ngFor="let scale of scaleHumor" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -457,14 +423,10 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Sports" completed=true>
-        <h4>Sports Games (examples include FIFA, NBA, PGA)</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="sports-radio-group"
-          [(ngModel)]="sports"
-          (change)="setAnswer(9, $event.value)"
-        >
+      <h4>Sports Games (examples include FIFA, NBA, PGA)</h4>
+      <mat-radio-group aria-label="Select an option" class="sports-radio-group" [(ngModel)]="sports" (change)="setAnswer(9, $event.value)">
         <mat-radio-button class="sports-radio-button" *ngFor="let scale of scaleSports" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -472,30 +434,22 @@
       <button mat-button matStepperPrevious>Back</button>
       <button mat-button matStepperNext>Next</button>
     </mat-step>
+
     <mat-step label="Rating" completed=true>
       <h3>How important to you is:</h3>
       <h4>That the game have a high rating, such as on Metacritic?</h4>
-      <mat-radio-group 
-        aria-label="Select an option"
-        class="rating-radio-group"
-        [(ngModel)]="rating"
-        (change)="setAnswer(10, $event.value)"
-      >
-      <mat-radio-button class="rating-radio-button" *ngFor="let scale of scaleRating" [value]="scale">
-        {{scale}}
-      </mat-radio-button>
-    </mat-radio-group><br>
-    <button mat-button matStepperPrevious>Back</button>
-    <button mat-button matStepperNext>Next</button>
-  </mat-step>
+      <mat-radio-group aria-label="Select an option" class="rating-radio-group" [(ngModel)]="rating" (change)="setAnswer(10, $event.value)">
+        <mat-radio-button class="rating-radio-button" *ngFor="let scale of scaleRating" [value]="scale">
+          {{scale}}
+        </mat-radio-button>
+      </mat-radio-group><br>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
     <mat-step label="Modern" completed=true>
-        <h4>That the game be a more recent, modern game?</h4>
-        <mat-radio-group 
-          aria-label="Select an option"
-          class="modern-radio-group"
-          [(ngModel)]="modern"
-          (change)="setAnswer(11, $event.value)"
-        >
+      <h4>That the game be a more recent, modern game?</h4>
+      <mat-radio-group aria-label="Select an option" class="modern-radio-group" [(ngModel)]="modern" (change)="setAnswer(11, $event.value)">
         <mat-radio-button class="modern-radio-button" *ngFor="let scale of scaleModern" [value]="scale">
           {{scale}}
         </mat-radio-button>
@@ -506,40 +460,9 @@
   </mat-horizontal-stepper>
 </div>
 
-<!-- <div class="container">
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a href="" class="nav-link" routerLink="/radar-chart">Your Profile</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link" routerLink="/description">Descriptions</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link" routerLink="/games">Recommended Games</a>
-    </li>
-  </ul>
-  <div>
-    <app-my-radar-chart
-      [adventureScore]="getAdventureScore()"
-      [gorehoundScore]="getGorehoundScore()"
-      [scientistScore]="getScientistScore()"
-      [trendyScore]="getTrendyScore()"
-      [socialScore]="getSocialScore()"
-    >
-    </app-my-radar-chart>
-  </div>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
-</div> -->
 <div>
-    <app-my-radar-chart
-    [adventureScore]="getAdventureScore()"
-    [gorehoundScore]="getGorehoundScore()"
-    [scientistScore]="getScientistScore()"
-    [trendyScore]="getTrendyScore()"
-    [socialScore]="getSocialScore()"
-   >
+  <app-my-radar-chart [adventureScore]="getAdventureScore()" [gorehoundScore]="getGorehoundScore()" [scientistScore]="getScientistScore()"
+    [trendyScore]="getTrendyScore()" [socialScore]="getSocialScore()">
   </app-my-radar-chart>
 </div>
 <div class="grid-container">
@@ -548,68 +471,99 @@
   <div><img alt="Scientist" src="../assets/scientist.gif" /></div>
   <div><img alt="Trendy" src="../assets/trendy.gif" /></div>
   <div><img alt="Gregarious" src="../assets/gregarious.gif" /></div>
-  
-  <div><h5><p id="text" align="center">Exploration, journey, and purpose.</p></h5> 
-    <h6><p id="text" align="center">Whether hero or villian, the adventurer enjoys interacting with different 
-    worlds and leaving their mark.</p><br>
-    <ul>
-      <li>Captivating story/characters</li>
-      <li>Unique, fleshed out settings</li>
-      <li>Time intensive</li>
-      <li>Player character can be changed/enhanced</li>
-    </ul>
+
+  <div>
+    <h5>
+      <p id="text" align="center">Exploration, journey, and purpose.</p>
+    </h5>
+    <h6>
+      <p id="text" align="center">Whether hero or villian, the adventurer enjoys interacting with different worlds and leaving their mark.</p><br>
+      <ul>
+        <li>Captivating story/characters</li>
+        <li>Unique, fleshed out settings</li>
+        <li>Time intensive</li>
+        <li>Player character can be changed/enhanced</li>
+      </ul>
     </h6>
   </div>
-  <div><h5><p id="text" align="center">Combat, adrenaline, and excitement.</p></h5>
-    <h6><p id="text" align="center">The gorehound is here to kick butt and chew bubblegum, 
-    and they're all out of gum.</p><br>
-    <ul>
-      <li>Fast-paced</li>
-      <li>Heightened sense of thrill, fear, or excitement</li>
-      <li>Tactics over strategy</li>
-      <li>Mature themes</li>
-    </ul>
+
+  <div>
+    <h5>
+      <p id="text" align="center">Combat, adrenaline, and excitement.</p>
+    </h5>
+    <h6>
+      <p id="text" align="center">The gorehound is here to kick butt and chew bubblegum, and they're all out of gum.</p><br>
+      <ul>
+        <li>Fast-paced</li>
+        <li>Heightened sense of thrill, fear, or excitement</li>
+        <li>Tactics over strategy</li>
+        <li>Mature themes</li>
+      </ul>
     </h6>
   </div>
-  <div><h5><p id="text" align="center">Analysis, intent, and challenging.</p></h5>
-    <h6><p id="text" align="center">Never content with mindless effort, the scientist seeks
-    that which causes them to utilize their intellectual faculties.</p><br>
-    <ul>
-      <li>Dynamic puzzles</li>
-      <li>A world with established rules</li>
-      <li>Requires multiple attempts</li>
-      <li>Strategic</li>
-    </ul>
+
+  <div>
+    <h5>
+      <p id="text" align="center">Analysis, intent, and challenging.</p>
+    </h5>
+    <h6>
+      <p id="text" align="center">Never content with mindless effort, the scientist seeks that which causes them to utilize their intellectual faculties.</p><br>
+      <ul>
+        <li>Dynamic puzzles</li>
+        <li>A world with established rules</li>
+        <li>Requires multiple attempts</li>
+        <li>Strategic</li>
+      </ul>
     </h6>
   </div>
-  <div><h5><p id="text" align="center">New, accessible, and well vetted.</p></h5>
-    <h6><p id="text" align="center">The trendy gamer seeks after the latest and greatest, and gets a 
-    thrill from beating each new release.</p><br>
-    <ul>
-      <li>Modern graphics</li>
-      <li>Pick up and play</li>
-      <li>New or different mechanics</li>
-      <li>Critically acclaimed</li>
-    </ul>
+
+  <div>
+    <h5>
+      <p id="text" align="center">New, accessible, and well vetted.</p>
+    </h5>
+    <h6>
+      <p id="text" align="center">The trendy gamer seeks after the latest and greatest, and gets a thrill from beating each new release.</p><br>
+      <ul>
+        <li>Modern graphics</li>
+        <li>Pick up and play</li>
+        <li>New or different mechanics</li>
+        <li>Critically acclaimed</li>
+      </ul>
     </h6>
   </div>
-  <div><h5><p id="text" align="center">Social, online, and interdependent.</p></h5>
-    <h6><p id="text" align="center">Gregarious gamers enjoy interacting with other players,
-    whether it's as a team or as enemies.</p><br>
-    <ul>
-      <li>Multiplayer emphasis</li>
-      <li>Competitive</li>
-      <li>Replay value</li>
-      <li>Local coop is a bonus</li>
-    </ul>
+
+  <div>
+    <h5>
+      <p id="text" align="center">Social, online, and interdependent.</p>
+    </h5>
+    <h6>
+      <p id="text" align="center">Gregarious gamers enjoy interacting with other players, whether it's as a team or as enemies.</p><br>
+      <ul>
+        <li>Multiplayer emphasis</li>
+        <li>Competitive</li>
+        <li>Replay value</li>
+        <li>Local coop is a bonus</li>
+      </ul>
     </h6>
     <p id='adventure-games'></p>
-  </div>    
+  </div>
 </div><br>
 
+<div>
+  <p id="text" align="center">Technologies used<br>
+    1: This<br>
+    2: This<br>
+    3: This<br>
+    4: This<br>
+    5: This<br>
+    6: This<br>
+    7: This<br>
+    8: This<br>
+  </p>
+</div>
 
 <footer>
-    Want to find some games?&nbsp;
-    <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
-    </a>
+  Want to find some games?&nbsp;
+  <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
+  </a>
 </footer>
