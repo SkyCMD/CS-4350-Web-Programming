@@ -492,7 +492,7 @@
       <p id="text" align="center">Combat, adrenaline, and excitement.</p>
     </h5>
     <h6>
-      <p id="text" align="center">The gorehound is here to kick butt and chew bubblegum, and they're all out of gum.</p><br>
+      <p id="text" align="center">Stay out of the way, because the gorehound is here to kick butt and chew bubblegum, and they're all out of gum.</p><br>
       <ul>
         <li>Fast-paced</li>
         <li>Heightened sense of thrill, fear, or excitement</li>
@@ -549,20 +549,23 @@
   </div>
 </div><br>
 
-<div>
-  <p id="text" align="center">Technologies used<br>
-    1: This<br>
-    2: This<br>
-    3: This<br>
-    4: This<br>
-    5: This<br>
-    6: This<br>
-    7: This<br>
-    8: This<br>
-  </p>
+<div align='center'>
+  <button onclick="document.getElementById('popup').style.display='block'">Technologies Used</button>
+  <div id="popup">
+    <p align='left'>
+    <b>HTML5:</b> footer tag; chart.js (radar chart)<br>
+    <b>CSS:</b> custom styling by class, id, and tag in .css<br>
+    <b>TypeScript:</b> radar chart data is populated via functions that use array of arrays of data from form fields (questions); spread operator<br>
+    <b>FrameWorks/Libraries:</b> Angular Material: stepper, radio button, form fields, button, select, menu, input<br>
+    <b>Node.js:</b> used to install chart.js, serve (npm run start) for local host, rifraf (npm run clean) to clean out node_modules for clean install<br>
+    <b>A web server:</b> local host<br>
+    <b>Fetching Data:</b> Unfortunately, this was not completed. The typsescript skeleton can be obversved in project, but I could not get it to function.<br>
+    </p>
+    <button onclick="document.getElementById('popup').style.display='none'">Hide Technologies</button>
+  </div>
 </div>
 
-<footer>
+<br><footer>
   Want to find some games?&nbsp;
   <a href="https://www.igdb.com/advanced_search" target="_blank" rel="noopener">Try out the Internet Game Database.
   </a>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ChangeDetectionStrategy } from '@angular/compiler/src/core';
 
 export interface Players {
   value: number;
@@ -12,7 +11,6 @@ export interface Games {
   scientist: string;
   trendy: string;
   gregarious: string;
-
 }
 
 @Component({
@@ -21,18 +19,6 @@ export interface Games {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  social: number;
-  rpg: number;
-  immersive: number;
-  hack: number;
-  horror: number;
-  survival: number;
-  puzzle: number;
-  strategy: number;
-  humor: number;
-  sports: number;
-  rating: number;
-  modern: number;
   title = 'FinalProject';
   players: Players[] = [
     { value: 1, viewValue: 'Solo' }, 
@@ -92,6 +78,5 @@ export class AppComponent {
     const json = await response.json();
     return json as Games[];
   }
-  
 }
 
